@@ -1,0 +1,22 @@
+<%= form_for @product do |f|%>
+    <ul>
+        <li><%= f.label :description, "Ingresa nombre del producto" %>
+        <%= f.text_field :description %></li>
+
+        <li><%= f.label :departament, "Ingresa el departamento que pertenece" %>
+        <%= f.text_field :departament %></li>
+
+        <li><%= f.label :cost, "Ingresa el precio costo" %>
+        <%= f.text_field :cost %></li>
+
+        <li><%= f.label :sale, "Ingresa el precio de venta" %>
+        <%= f.text_field :sale %></li>
+
+        <li><%= f.label :amount, "Ingresa la cantidad" %>
+        <%= f.text_field :amount %></li>
+
+        <%= f.submit %>
+    </ul>
+<% end %>
+
+<%= link_to "Volver al listado", products_path %>

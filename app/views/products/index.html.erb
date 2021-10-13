@@ -1,0 +1,17 @@
+<h1>Lista de productos</h1>
+<%# <p>Find me in app/views/products/index.html.erb</p> %>
+
+<ul>
+    <% @product.each do |product| %>
+        <li><%= link_to "#{product.description}", product_path(product) %> </li>
+        <%# <%= link_to "#{product.description} / Departamento: #{product.departament} / 
+        Valor: #{product.sale}", product_path(product) %>
+        <%= link_to "Editar", edit_product_path(product) %>
+    <% end %>
+</ul>
+
+<%= link_to "Ingresar Producto", new_product_path %>
+
+
+
+

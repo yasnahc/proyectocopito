@@ -1,0 +1,9 @@
+<h1>Información del producto</h1>
+
+<h3><%= "Descripción: #{@product.description}" %><h3>
+<h3> <%= "Precio de venta: #{@product.sale}" %></h3>
+
+<%= link_to "volver al listado", products_path %>
+<%= link_to "eliminar", product_path(@product), method: :delete %>
+
+
