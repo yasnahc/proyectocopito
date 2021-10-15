@@ -1,0 +1,6 @@
+<h1>Agrega un comentario del producto <%= @product.description %></h1>
+
+<%= simple_form_for [@product, @review] do |form| %>
+    <%= form.input :content, label: "Deja tu comentario" %>
+    <%= form.button :submit %>
+<% end %>

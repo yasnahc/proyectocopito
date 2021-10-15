@@ -3,7 +3,7 @@
 
 <ul>
     <% @product.each do |product| %>
-        <li><%= link_to "#{product.description}", product_path(product) %> </li>
+        <li><small><%= link_to "#{product.description}", product_path(product) %> </small></li>
         <%# <%= link_to "#{product.description} / Departamento: #{product.departament} / 
         Valor: #{product.sale}", product_path(product) %>
         <%= link_to "Editar", edit_product_path(product) %>
