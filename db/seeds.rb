@@ -16,7 +16,8 @@ puts "Agregando 50 productos"
         departament: Faker::Food.spice,
         cost: (100..1000).to_a.sample,
         sale: (1000..5000).to_a.sample,    
-        amount: (1..99).to_a.sample
+        amount: (1..99).to_a.sample,
+        supplier: Faker::Commerce.vendor
     )
     productos.save!
     puts "Creamos el producto con id #{productos.id}"

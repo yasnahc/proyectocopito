@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-before_action :set_product, only: [:destroy, :update, :show, :edit]
+before_action :set_product, only: [:destroy, :update, :show, :edit, :supplier]
 
   def index
     @product = Product.all 
@@ -28,6 +28,13 @@ before_action :set_product, only: [:destroy, :update, :show, :edit]
   end
 
   def edit
+  end
+
+  def top
+    @product = Product.where(sale: 1000..2000)
+  end
+
+  def supplier    
   end
 
   private
