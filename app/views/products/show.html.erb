@@ -5,8 +5,14 @@
 
 <h3>Reviews</h3>
 
+<h2>Reviews. <small><%= link_to "Deja tu comentario", new_product_review_path(@product) %></small></h2>
+
 <% @product.reviews.each do |review| %>
-    <p><%= review.content %></p>
+    <p><%= review.content %>
+    <small>
+    <%= link_to "Eliminar", review_path(review), method: :delete, data: { confirm: "¿Seguro? El el registro será eliminado"} %>
+    </small>
+    </p>
 <% end %>
 
 <%= link_to "volver al listado", products_path %>

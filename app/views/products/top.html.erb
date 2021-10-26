@@ -1,7 +1,7 @@
 <h1>Nuestros productos más economicos</h1>
 
 <ul>
-<% @product.each do |product| %>
-<li><%= "#{product.description} / Precio: #{product.sale}" %></li>
-<% end %>
+    <% @product.each do |product| %>
+        <li><%= "#{product.description} / Precio: #{product.sale}" %></li>
+    <% end %>
 </ul>

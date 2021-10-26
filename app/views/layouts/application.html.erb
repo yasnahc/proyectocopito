@@ -13,7 +13,15 @@
   </head>
 
   <body>
-  <%# esto se muestra en todas las vistas %>
-    <%= yield %>
+    <%# esto se muestra en todas las vistas %>
+    <%= render 'shared/navbar'%>
+    <%= render 'shared/alert'%>
+    <div class="container">
+      <%# agrega las siguientes 2 lineas para funcionamiento de gem device %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+    
   </body>
 </html>
